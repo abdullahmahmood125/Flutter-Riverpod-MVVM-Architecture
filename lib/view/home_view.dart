@@ -3,7 +3,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod_with_mvvm/resources/app_routs.dart';
 
 import '../utils/app_providers.dart';
-import 'login_view.dart';
 
 
 class HomeView extends ConsumerWidget {
@@ -15,7 +14,7 @@ class HomeView extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home'),
+        title: const Text('Home'),
         actions: [
           IconButton(
             onPressed: () async {
@@ -27,7 +26,7 @@ class HomeView extends ConsumerWidget {
           ),
         ],
       ),
-      body: Center(
+      body: const Center(
         child: Text('Welcome!'),
       ),
     );

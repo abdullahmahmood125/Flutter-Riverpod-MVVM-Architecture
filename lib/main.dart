@@ -4,7 +4,6 @@ import 'package:flutter_riverpod_with_mvvm/resources/app_routs.dart';
 import 'package:flutter_riverpod_with_mvvm/view/home_view.dart';
 import 'package:flutter_riverpod_with_mvvm/view/login_view.dart';
 
-
 void main() {
   runApp(
     ProviderScope(
@@ -23,10 +22,10 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       routes: {
-        AppRoutes.LOGIN_SCREEN_ROUTE: (context) =>  LoginView(),
-        AppRoutes.HOME_SCREEN_ROUTE: (context) =>   HomeView(),
-    },
-      home: LoginView(),
+        AppRoutes.LOGIN_SCREEN_ROUTE: (context) => const LoginView(),
+        AppRoutes.HOME_SCREEN_ROUTE: (context) => const HomeView(),
+      },
+      home: const LoginView(),
     );
   }
 }

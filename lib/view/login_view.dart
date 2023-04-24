@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod_with_mvvm/resources/app_routs.dart';
-import 'package:flutter_riverpod_with_mvvm/utils/app_state.dart';
-import 'package:flutter_riverpod_with_mvvm/viewmodel/login_view_model.dart';
 
 import '../utils/app_providers.dart';
-import 'home_view.dart';
 
 class LoginView extends ConsumerWidget {
+  const LoginView({super.key});
+
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -24,11 +23,6 @@ class LoginView extends ConsumerWidget {
             return const Center(child: CircularProgressIndicator());
           }
           if(state.isSuccess){
-            // return const Center(child: Text("Login Successful!"));
-            // Navigator.of(context).push(
-            //     MaterialPageRoute(
-            //         builder: (context) =>
-            //             const HomeView()));
              AppRoutes.showHome(context);
           }
           return Center(
@@ -37,26 +31,26 @@ class LoginView extends ConsumerWidget {
               children: [
                 TextField(
                   onChanged: viewModel.setUsername,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     labelText: 'Username',
                   ),
                 ),
                 TextField(
                   onChanged: viewModel.setPassword,
                   obscureText: true,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     labelText: 'Password',
                   ),
                 ),
                 SizedBox(height: 24),
                 ElevatedButton(
                   onPressed: state.canSubmit ? viewModel.login : null,
-                  child: Text('Login'),
+                  child: const Text('Login'),
                 ),
                 if (state.errorMessage.isNotEmpty)
                   Text(
                     state.errorMessage,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.red,
                     ),
                   ),

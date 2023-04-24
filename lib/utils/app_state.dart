@@ -1,5 +1,3 @@
-
-
 class LoginState {
   final String username;
   final String password;
@@ -13,7 +11,6 @@ class LoginState {
     this.isLoading = false,
     this.errorMessage = '',
     this.isSuccess = false,
-
   });
 
   LoginState copyWith({
@@ -29,7 +26,6 @@ class LoginState {
       isLoading: isLoading ?? this.isLoading,
       errorMessage: errorMessage ?? this.errorMessage,
       isSuccess: isSuccess ?? this.isSuccess,
-
     );
   }
 
@@ -38,18 +34,13 @@ class LoginState {
 }
 
 class HomeState {
-   HomeState(this.isLoggedIn);
+  HomeState(this.isLoggedIn);
+
   final isLoggedIn;
 
-  HomeState copyWith( {
+  HomeState copyWith({
     bool? isLoggedIn,
-  }){
+  }) {
     return HomeState(isLoggedIn);
   }
-}
-
-
-class AppStateNotifier {
-  const AppStateNotifier(this.isLoggedIn);
-  final isLoggedIn;
 }
