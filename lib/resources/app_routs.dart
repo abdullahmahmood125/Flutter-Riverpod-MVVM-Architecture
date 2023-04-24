@@ -17,9 +17,11 @@ class AppRoutes {
   }
 
   static Future<void> showHome(BuildContext context) async {
-    Future.delayed(const Duration(milliseconds: 500));
-    await Navigator.of(context).pushReplacement(
-      MaterialPageRoute(builder: (context) => const HomeView()),
-    );
+    Future.delayed(Duration.zero,(){
+       Navigator.of(context).pushReplacement(
+        MaterialPageRoute(builder: (context) =>  const HomeView()),
+      );    });
+    //Future.delayed(const Duration(milliseconds: 500));
+
   }
 }

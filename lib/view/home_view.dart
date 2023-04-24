@@ -20,7 +20,7 @@ class HomeView extends ConsumerWidget {
           IconButton(
             onPressed: () async {
               await viewModel.logout();
-              Navigator.pushNamedAndRemoveUntil(context, AppRoutes.LOGIN_SCREEN_ROUTE, (Route<dynamic> route) => false);
+              AppRoutes.showLogin(context);
 
               },
             icon: Icon(Icons.logout),
@@ -32,4 +32,5 @@ class HomeView extends ConsumerWidget {
       ),
     );
   }
+
 }
