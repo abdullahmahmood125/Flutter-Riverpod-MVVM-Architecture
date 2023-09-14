@@ -1,4 +1,4 @@
-# flutter riverpod with mvvm 
+# flutter riverpod with mvvm
 
 Flutter app using the Riverpod state management library, with an MVVM architecture.
 
