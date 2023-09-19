@@ -2,7 +2,7 @@
  
 Flutter app using the Riverpod state management library, with an MVVM architecture.
 
-## Getting Started
+## Getting Started 
 
 First, make sure you have Flutter and Riverpod installed. You can follow the installation instructions on the Flutter and Riverpod websites.
 
